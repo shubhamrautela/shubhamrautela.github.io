@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Sets</title>
-    <script src="./load-mathjax.js" async></script>
+    <script src="load-mathjax.js" async></script>
+    <link href="./style.css" rel="stylesheet">
   </head>
   <body>
     <center><h1>Sets</h1></center>
@@ -29,10 +30,10 @@
     </li>
     <li>Order doesn't matter. Eg:- {4, 1, 3, 2} = {1, 2, 3, 4}</li>
     <li>Repitition doesn't matter. Eg:- {F, O, L, L, O, W} = {W, O, L, F}</li>
+    <li><b>Cardinal number:-</b> The number of elements in a set is called its cardinality. If $A = {1, 2, 3}$ then $n(A) = 3$</li>
     <li><b>Types of sets</b>
         <ul>
           <li><b>Null set:-</b> A set having no elements. Also called an Empty set. { }, $\phi$</li>
-          <li><b>Cardinal number:-</b> The number of elements in a set is called its cardinality. If $A = {1, 2, 3}$ then $n(A) = 3$</li>
           <li><b>Singleton set:-</b> A set having only one element. Eg:- A set containing even prime numbers.</li>
           <li><b>Finite & Infinite sets:-</b>
               <ol>
@@ -41,10 +42,100 @@
               </ol>
             </li>
           <li><b>Universal set:-</b> A set containing all possible elements in the given context. Represented by $U$.</li>
+          <li><b>Equal sets:-</b> Two sets are called equal if they have exactly same elements. Eg:- $A = \{4, 1, 3, 2\}, B = \{1, 2, 3, 4\}, A = B$</li>
+          <li><b>Equivalent sets:-</b> Two sets are called equivalent if they have exactly the same number of elements. Eg:- $A = \{M, A, R, X\}, B = \{1, 2, 3, 4\}, n(A) = n(B)$</li>
         </ul>
     </li>
+    <li><b>Subset:-</b> $A$ is a subset of $B$ if all the elements of $A$ are in $B$. $A \subseteq B$</li>
+    <li><b>Proper Subset:-</b> $A$ is a proper subset of $B$ if $B$ has some extra elements that aren't $A$. $A \subset B$</li>
+    <li>Some nots on subsets
+      <ol>
+        <li>Null set is a subset of every set.</li>
+        <li>Every set is a subset of Universal set.</li>
+        <li>Every set is a subset of itself. $A \subset A$</li>
+      </ol>
+    </li>
+    <li>Number of subsets of a set having n elements is $2^n$. Proof: There are $\sum^{n}_{r=0} {^nC_r}$ ways of choosing the elements out of $n$ elements, which is equal to ${^nC_0}+{^nC_1}+...+{^nC_n} = (1 + 1)^n = 2^n$</li>
+    <li><b>Power Set:-</b> A set containing all possible subsets of a set. If $A = \{1, 2, 3, 4, 5\}, n(P(A)) = 2^3$</li>
 
-    </ul>
-
+    <li>
+    <table border = "1">
+      <tr>
+        <th>Operation</th>
+        <th>Definition</th>
+        <th>Venn Diagram</th>
+        <th>Properties</th>
+      </tr>
+      <tr>
+        <td>Union $\cup$</td>
+        <td>All the elements of the sets.</td>
+        <td></td>
+        <td>
+          <ul>
+            <li>$A \cup B = B \cup A$</li>
+            <li>$A \cup A = A$</li>
+            <li>$A \cup (B\cup C) = (A\cup B)\cup C$</li>
+            <li>$A \cup U = U$</li>
+            <li>$A \cup \phi = A$</li>
+            <li>if $A \subseteq B$ then $A \cup B = B$</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>Intersection $\cap$</td>
+        <td>All the elements commmon to the sets.</td>
+        <td></td>
+        <td>
+          <ul>
+            <li>$A \cap B = B \cap A$</li>
+            <li>$A \cap A = A$</li>
+            <li>$A \cap (B\cap C) = (A\cap B)\cap C$</li>
+            <li>$A \cap U = A$</li>
+            <li>$A \cap \phi = \phi$</li>
+            <li>if $A \subseteq B$ then $A \cap B = A$</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>Difference </td>
+        <td>Elements in a set minus the elements in another set</td>
+        <td></td>
+        <td>
+          <ul>
+            <li>$A - A = \phi$</li>
+            <li>$A - U = \phi$</li>
+            <li>$A - \phi = A$</li>
+            <li>$A - (B\cap C) = (A - B) \cup (A - C)$</li>
+            <li>$A - (B\cup C) = (A - B) \cap (A - C)$</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>Complement $^{c}$ </td>
+        <td>Everything except the elements in the set.</td>
+        <td></td>
+        <td>
+          <ul>
+            <li>$A \cup A^{c} = U$</li>
+            <li>$A \cap A^{c} = \phi$</li>
+            <li>$U^{c} = \phi$</li>
+            <li>$\phi^{c}=U$</li>
+            <li>$A - A^{c} = A$</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>Symmetric Difference $\triangle$</td>
+        <td>Whole minus the common elements.</td>
+        <td></td>
+        <td><ul>
+          <li>$A \triangle B = (A \cup B) - (A \cap B)$</li>
+        </ul></td>
+      </tr>
+    </table>
+  </li>
+  <li>$n(A\cup B)= n(A)+ n(B)- n(A\cap B)$</li>
+  <li>$n(A\cup B \cup C)= n(A)+ n(B) + n(C)- n(A \cap B) - n(B \cap C) - n(A \cap C) + n(A \cup B \cup C)$</li>
+</ul>
   </body>
 </html>

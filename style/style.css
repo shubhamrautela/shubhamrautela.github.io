@@ -1,31 +1,24 @@
+h1{
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(2,40,78,1) 1%, rgba(1,132,173,1) 57%, rgba(0,212,255,1) 100%);
+  color: white;
+}
 body {
-  margin: 0;
-  overflow: hidden;
+  background: rgb(34,193,195);
+background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%); 
+
+}
+table {
+
+  border: 1px solid black;
+  table-layout: fixed;
+  border-collapse: collapse;
 }
 
-rect {
-  fill: steelblue;
-}
+li {
+  border: 1px solid black;
+  margin: 20px 10px 10px 10px;
 
-text {
-  font-size: 2em;
-  font-family: sans-serif;
-}
-.tick text{
-  font-size: 1.7em;
-  fill: #635F5D;
-}
+  padding: 10px 10px 10px 10px;
 
-.tick line{
-  stroke: #C0C0BB;
-}
-
-.axis-label{
-  font-size: 3em;
-  fill: #635F5D;
-}
-
-.title{
-  font-size: 2em;
-  fill: #635F5D;
 }

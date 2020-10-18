@@ -10,7 +10,7 @@ body {
 }
 table {
 
-  border: 1px solid black;
+  border: 1px solid rgb(255,84,104);
   table-layout: fixed;
   border-collapse: collapse;
 }

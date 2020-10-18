@@ -4,8 +4,8 @@ h1{
   color: white;
 }
 body {
-  background: rgb(34,193,195);
-background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%); 
+  background: white;
+
 
 }
 table {
@@ -16,7 +16,8 @@ table {
 }
 
 li {
-  border: 1px solid black;
+  background: rgba(255,84,104,0.3); 
+  border: 2px solid rgb(255,84,104);
   margin: 20px 10px 10px 10px;
 
   padding: 10px 10px 10px 10px;

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Graph Transformation</title>
+    <script src="load-mathjax.js" async></script>
+
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <center><h1>Graph Transformations</h1></center>
+    <br>
+
+    If we have a function $y = f(x)$ then how will we plot $y = f(x+a)$, $y = af(x)$, $y = f(ax)$ and $y = af(bx+c) +d $
+    <ol>
+      <li>If $y = f(x)$ is given, plot $y = f(x) \pm c$ (Vertical shift)
+        <br><br>
+          <button type="button" name="button1" id="button1" onclick="example1();">example1</button>
+        <button type="button" name="button1" id="button1" onclick="example2();">example2</button>
+        <br>
+        <canvas id="canvas1" width="720" height="400"></canvas>
+
+
+      </li>
+      <li>If $y = f(x)$ is given, plot $y = f(x\pm a)$ (Horizontal shift)
+        <br><br>
+          <button type="button" name="button1" id="button1" onclick="example3();">example1</button>
+        <button type="button" name="button1" id="button1" onclick="example4();">example2</button>
+        <br>
+        <canvas id="canvas2" width="720" height="400"></canvas>
+
+</li>
+      <li>If $y = f(x)$ is given, plot $y = a*f(x)$ (Vertical Stretch)
+        <br><br>
+          <button type="button" name="button1" id="button1" onclick="example5();">example1</button>
+        <button type="button" name="button1" id="button1" onclick="example6();">example2</button>
+        <br>
+        <canvas id="canvas3" width="720" height="400"></canvas></li>
+    </ol>
+  </body>
+  <script src="js/GT.js" ></script>
+</html>

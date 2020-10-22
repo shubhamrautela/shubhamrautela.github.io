@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>Graph Transformation</title>
-    <script src="../load-mathjax.js" async></script>
+    <script src="load-mathjax.js" async></script>
 
-    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="./style.css">
   </head>
   <body>
     <center><h1>Graph Transformations</h1></center>
@@ -30,13 +30,41 @@
         <canvas id="canvas2" width="720" height="400"></canvas>
 
 </li>
-      <li>If $y = f(x)$ is given, plot $y = a*f(x)$ (Vertical Stretch)
+      <li>If $y = f(x)$ is given, plot $y = f(a*x)$ (Vertical Stretch)
         <br><br>
-          <button type="button" name="button1" id="button1" onclick="example5();">example1</button>
-        <button type="button" name="button1" id="button1" onclick="example6();">example2</button>
+          <button type="button" name="button1" id="button1" onclick="example5();">example</button>
+
         <br>
-        <canvas id="canvas3" width="720" height="400"></canvas></li>
+        <canvas id="canvas3" width="720" height="400"></canvas>
+      </li>
+
+      <li>If $y = f(x)$ is given, plot $y = a*f(x)$ (Horizontal Stretch)
+        <br><br>
+          <button type="button" name="button1" id="button1" onclick="example6();">example</button>
+
+        <br>
+        <canvas id="canvas4" width="720" height="400"></canvas>
+      </li>
     </ol>
+    <h3>Conclusion</h3>
+      <ol>
+        <li>Combining everything
+          <br><br>
+            <button type="button" name="button1" id="button1" onclick="conclusion();">show</button>
+
+          <br>
+          <canvas id="canvas5" width="720" height="400"></canvas>
+          <div>
+            <input type="range" id="verticalshift" name="volume" min="-100" max="100" step="any" value="0">vertical shift<br>
+            <input type="range" id="horizontalshift" name="volume" min="-100" max="100" step="any" value="0">horizontal shift<br>
+            <input type="range" id="verticalstretch" name="volume" min="-100" max="100" value="60">vertical stretch<br>
+            <input type="range" id="horizontalstretch" name="volume" min="0" max="100" value="38">horizontal stretch<br>
+          </div>
+        </li>
+
+      </ol>
+
+
   </body>
-  <script src="../src/GT.js" ></script>
+  <script src="js/GT.js" ></script>
 </html>

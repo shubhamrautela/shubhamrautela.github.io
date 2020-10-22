@@ -2,23 +2,41 @@ let canvas1,
     canvas2,
     canvas3,
     canvas4,
+    canvas5,
     width,
     height,
     centerX,
     centerY;
+
+
+    const slider1 = document.getElementById('verticalshift');
+    slider1.onchange = function(){
+      conclusion();
+    }
+    const slider2 = document.getElementById('horizontalshift');
+    slider2.onchange = function(){
+      conclusion();
+    }
+    const slider3 = document.getElementById('verticalstretch');
+    slider3.onchange = function(){
+      conclusion();
+    }
+    const slider4 = document.getElementById('horizontalstretch');
+    slider4.onchange = function(){
+      conclusion();
+    }
 
 window.onload = function(){
 canvas1 = document.getElementById('canvas1');
 canvas2 = document.getElementById('canvas2');
 canvas3 = document.getElementById('canvas3');
 canvas4 = document.getElementById('canvas4');
+canvas5 = document.getElementById('canvas5');
 width = canvas1.width;
     height = canvas1.height;
     centerX = width/2;
     centerY = height/2;
 }
-
-
 function drawPlane(ctx){
   ctx.strokeStyle="rgb(200,200,200)";
   ctx.lineWidth = 1;
@@ -41,7 +59,6 @@ function drawPlane(ctx){
   ctx.stroke();
 
 }
-
 function label(str1, str2, str3,ctx){
   ctx.clearRect(580,0,700,60);
   ctx.fillStyle="rgb(0,102,104)";
@@ -66,7 +83,6 @@ function label(str1, str2, str3,ctx){
 
 
 }
-
 function example1(){
   let ctx = canvas1.getContext('2d');
   ctx.clearRect(0,0,width,height);
@@ -97,9 +113,6 @@ function example1(){
 
 
 }
-
-
-
 function example2(){
 
   let ctx = canvas1.getContext('2d');
@@ -133,7 +146,6 @@ function example2(){
 
 
 }
-
 function example3(){
   let ctx = canvas2.getContext('2d');
   ctx.clearRect(0,0,width,height);
@@ -168,8 +180,6 @@ function example3(){
     ctx.fill();
   }
 }
-
-
 function example4(){
 
   let ctx = canvas2.getContext('2d');
@@ -203,17 +213,13 @@ function example4(){
 
 
 }
-
-
-
-
 function example5(){
 
   let ctx = canvas3.getContext('2d');
   ctx.clearRect(0,0,width,height);
   drawPlane(ctx);
 
-  label("2sin(x)","sin(x)","sin(x-PI/2)/2",ctx);
+  label("2sin(x)","sin(x)","sin(x)/2",ctx);
 
 
   for(let i=-Math.PI*4;i<Math.PI*4;i+=0.01){
@@ -238,5 +244,68 @@ function example5(){
 
   }
 
+
+}
+function example6(){
+
+  let ctx = canvas4.getContext('2d');
+  ctx.clearRect(0,0,width,height);
+  drawPlane(ctx);
+
+  label("sin(2x)","sin(x)","sin(x/2)",ctx);
+
+
+  for(let i=-Math.PI*4;i<Math.PI*4;i+=0.01){
+    let x=i*40;
+    let y = Math.sin(i)*40;
+    ctx.fillStyle= "red";
+    ctx.beginPath();
+
+    ctx.arc(centerX+x,centerY-y,1,0,2*Math.PI,true);
+    ctx.fill();
+
+    ctx.fillStyle= "rgb(0,153,0)";
+    ctx.beginPath();
+    ctx.arc((centerX+x*2),centerY-y,1,0,2*Math.PI,true);
+    ctx.fill();
+
+    ctx.fillStyle= "rgb(0,102,104)";
+    ctx.beginPath();
+    ctx.arc(centerX+x*0.5,centerY-y,1,0,2*Math.PI,true);
+
+    ctx.fill();
+
+  }
+
+
+}
+function conclusion(){
+  let verticalShift = document.getElementById('verticalshift').value;
+  let horizontalShift = document.getElementById('horizontalshift').value;
+  let verticalStretch = document.getElementById('verticalstretch').value;
+  let horizontalStretch= document.getElementById('horizontalstretch').value;
+
+  let ctx = canvas5.getContext('2d');
+  ctx.clearRect(0,0,width,height);
+  drawPlane(ctx);
+
+  console.log((centerX+horizontalStretch)+" "+(centerY-verticalStretch));
+  ctx.beginPath();
+  ctx.strokeStyle = "red";
+  ctx.lineWidth = "5";
+  ctx.moveTo(centerX+horizontalStretch,centerY-verticalStretch);
+  ctx.lineTo(centerX+horizontalStretch,centerY);
+  ctx.stroke();
+  for(let i=-Math.PI*100;i<Math.PI*100;i+=0.01){
+    let x=i*horizontalStretch;
+    let y = Math.sin(i)*verticalStretch;
+
+    ctx.fillStyle= "green";
+    ctx.beginPath();
+
+    ctx.arc(centerX-horizontalShift+x,centerY-verticalShift-y,1,0,2*Math.PI,true);
+
+    ctx.fill();
+  }
 
 }

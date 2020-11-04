@@ -62,24 +62,73 @@ function strokeStar(x, y, r, n, inset) {
     ctx.restore();
 }
 
-function Piece(x,y,color){
-  this.x = x;
-  this.y = y;
-  this.radius = 15;
-  this.color = color;
-  this.clickable = false;
-
-}
+// function Piece(x,y,color){
+//   this.x = x;
+//   this.y = y;
+//   this.radius = 15;
+//   this.color = color;
+//   this.clickable = false;
+//
+// }
 
 function drawPiece(piece){
 console.log(piece.radius+ "   "+ piece.x+ " " +piece.y);
-
+  if(piece.curr>0)
+  ctx.clearRect(dx+(piece.path[piece.curr-1][0]-1)*42+1,dy+(piece.path[piece.curr-1][1]-1)*42+1,40,40);
   ctx.beginPath();
   ctx.fillStyle = piece.color;
-  ctx.arc(dx+piece.x,dy+piece.y,this.radius,0,Math.PI*2);
+  ctx.strokeStyle = "black";
+  ctx.lineWidth = 2;
+  ctx.arc(dx+42*(piece.path[piece.curr][0]-1)+21,dy+42*(piece.path[piece.curr][1]-1)+21,piece.radius,0,Math.PI*2);
   ctx.fill();
-
+  piece.curr++;
 
 }
-let rPiece1 = new Piece(100,100,"red");
-drawPiece(rPiece1);
+// let rPiece1 = new Piece(100,100,"red");
+// let rPiece2 = new Piece(100,150,"red");
+// let rPiece3 = new Piece(150,100,"red");
+// let rPiece4 = new Piece(150,150,"red");
+// drawPiece(rPiece1);
+// drawPiece(rPiece2);
+// drawPiece(rPiece3);
+// drawPiece(rPiece4);
+
+
+
+class Piece{
+  constructor(color){
+  this.radius = 15;
+  this.color = color;
+  this.clickable = false;
+  this.path = [];
+ }
+}
+
+
+class RedPiece extends Piece{
+  constructor(x,y){
+    super("red");
+    this.x = x;
+    this.y = y;
+    this.initX = 0;
+    this.initY = 0;
+    this.curr=0;
+    this.path = [ [2,7],[3,7],[4,7],[5,7],[6,7],
+                  [7,6],[7,5],[7,4],[7,3],[7,2],[7,1],
+                  [8,1],
+                  [9,1],[9,2],[9,3],[9,4],[9,5],[9,6],
+                  [10,7],[11,7],[12,7],[13,7],[14,7],[15,7],
+                  [15,8],
+                  [15,9],[14,9],[13,9],[12,9],[11,9],[10,9],
+                  [9,10],[9,11],[9,12],[9,13],[9,14],[9,15],
+                  [8,15],
+                  [7,15],[7,14],[7,13],[7,12],[7,11],[7,10],
+                  [6,9],[5,9],[4,9],[3,9],[2,9],[1,9],
+                  [1,8],[2,8],[3,8],[4,8],[5,8],[6,8],[7,8]
+                ]
+  }
+}
+let rPiece1 = new RedPiece(100,100);
+canvas.addEventListener('click', function(e){
+  drawPiece(rPiece1);
+})

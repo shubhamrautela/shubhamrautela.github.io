@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="../src/load-mathjax.js" async></script>
+    <link href="../style/mcq.css" rel="stylesheet">
+</head>
+<body>
+    <ol class="quiz">
+        <li>
+            <h4>If $3tanAtanB = 1$, prove that $2cos(A+B) = cos(A-B)$</h4>
+            <div class="">
+                <span>$3tanAtanB = 1 \Rightarrow 3sinAsinB = cosAcosB $</span><br>
+                <span>$\Rightarrow 2sinAsinB = cos(A+B)$</span><br>
+                <span>$\Rightarrow sinAsinB + cosAcosB + sinAsinB - cosAcosB = cos(A+B)$</span><br>
+                <span>$\Rightarrow cos(A-B) + -cos(A+B) = cos(A+B)$</span><br>
+                <span>$\Rightarrow cos(A-B) = 2cos(A+B)$</span><br>
+            </div>
+        </li>
+
+        <li>
+            <h4>If $cos(\alpha - \beta) + cos(\beta - \gamma) + cos(\gamma - \alpha) = -3/2$, prove that $cos \alpha + cos\beta + cos\gamma = sin\alpha + sin\beta + sin\gamma = 0$</h4>
+            <div class="">
+                <span>$2\{cos(\alpha - \beta) + cos(\beta - \gamma) + cos(\gamma - \alpha)\} + 3 = 0$</span><br>
+                <span>$\Rightarrow 2cos\alpha cos\beta + 2cos\beta cos\gamma + 2cos\gamma cos\alpha + 2sin\alpha sin\beta + 2 sin\gamma sin\beta + 2sin\gamma sin\alpha + sin^2\alpha + cos^2\alpha + sin^2\beta + cos^2\beta + sin^2\gamma + cos^2\gamma = 0$</span><br>
+                <span>$\Rightarrow (cos\alpha + cos\beta + cos\gamma)^2 + (sin\alpha + sin\beta + sin\gamma)^2 =0$</span><br>
+                <span>$\Rightarrow cos \alpha + cos\beta + cos\gamma = sin\alpha + sin\beta + sin\gamma = 0$</span><br>
+            </div>
+        </li>
+
+        <li>
+            <h4>If $sin B = 3 sin(2A + B)$, prove that $2tanA + tan(A+B) = 0$</h4>
+            <div class="">
+                <span>$sin B = 3 sin(2A + B) \Rightarrow $</span><br>
+                <span>$\Rightarrow sin((A+B)-A) = 3 sin(A+(A+B))$</span><br>
+                <span>$\Rightarrow sin(A+B)cosA - cos(A+B)sinA = 3 (sin(A)cos(A+B) + sin(A+B)cos(A))$, divide by $cos(A+B)$</span><br>
+                <span>$\Rightarrow tan(A+B)cosA - sinA = 3(sin(A) + tan(A+B)cos(A))$</span><br>
+                <span>$\Rightarrow 2tan(A+B)cosA + 4sinA = 0$ divide by cosA</span><br>
+                <span>$\Rightarrow tan(A+B) + 2tanA$</span><br>
+            </div>
+        </li>
+
+        <li>
+            <h4>If $2tan\beta + cot\beta = tan\alpha$, prove that $cot\beta = 2tan(\alpha -\beta)$</h4>
+            <div class="">
+                <span>$2tan(\alpha - \beta) = 2\frac{tan\alpha - tan\beta}{1+tan\alpha tan\beta} \Rightarrow $</span><br>
+                <span>replace $tan\alpha$ with $2tan(\alpha =\beta)$</span><br>
+            </div>
+        </li>
+
+        <li>
+            <h4>If $cos(\alpha + \beta)sin(\gamma + \delta) = cos(\alpha - \beta) sin(\gamma - \delta)$, prove that $cot\alpha cot\beta cot\gamma = cot \delta$</h4>
+            <div class="">
+                <span>put similar terms on same side and apply compnendo dividendo $\frac{cos(\alpha - \beta)}{cos(\alpha + \beta)} = \frac{sin(\gamma + \delta)}{sin(\gamma - \delta)}$</span><br>
+                <span>apply componendo dividendo</span><br>
+            </div>
+        </li>
+
+        <li>
+            <h4>Prove that: $sin^2A = cos^2(A-B) + cos^2B - 2cos(A-B)cosAcosB$</h4>
+            <div class="">
+                <span>$cos(A-B)(cosAcosB + sinAsinB - 2cosAcosB) + cos^2B$</span><br>
+                <span>$-cos(A-B)cos(A+B) + cos^2B$</span><br>
+                <span>$sin^2B - cos^2A + cos^2B $</span><br />
+                <span>$1 - cos^2A = sin^2A$</span>
+            </div>
+        </li>
+
+        <li>
+            <h4>Prove that: $cot\theta cot2\theta + cot2\theta cot3\theta + 2 = cot\theta (cot\theta - cot3\theta)$</h4>
+            <div class="">
+                <span>$cot\theta cot2\theta + 1 + cot2\theta cot3\theta + 1$</span><br>
+                <span>using identity $cotAcotB + 1 = \frac{cos(A-B)}{sinAsinB} \Rightarrow \frac{cos(2\theta - \theta)}{sin\theta sin2\theta} + \frac{cos(3\theta - 2\theta)}{sin2\theta sin3\theta}$</span><br>
+                <span>divide and multiply by sin theta and simplify</span>
+            </div>
+        </li>
+
+        <li>
+            <h4>If $atan\alpha + btan\beta = (a+b)tan(\frac{\alpha + \beta}{2}),$ where $\alpha \neq \beta$, prove that $acos\beta = bcos\alpha$</h4>
+            <div class="">
+                <span>$atan\alpha + btan\beta = (a+b)tan(\frac{\alpha + \beta}{2})$</span><br>
+                <span>$a\{tan \alpha - tan(\frac{\alpha + \beta}{2})\} = b\{tan(\frac{\alpha + \beta}{2}) - \tan \beta \}$</span><br>
+                <span>use identity $tanA - tanB = \frac{sin(A-B)}{cosAcosB}$</span>
+            </div>
+        </li>
+
+        <li>
+            <h4>If $sin\alpha + sin \beta = a$ and $cos\alpha + cos\beta = b$, show that $cos (\alpha + \beta) = \frac{b^2-a^2}{b^2+a^2}$</h4>
+            <div class="">
+                <span>square both sides, add and subtract.</span><br>
+
+            </div>
+        </li>
+
+        <li>
+            <h4>If $\alpha$ and $\beta$ are the solutions of the equation $atan\theta + bsec\theta = c$, the show that $tan(\alpha + \beta) = \frac{2ac}{a^2-c^2}$</h4>
+            <div class="">
+                <span>square both sides, then take the sum and product of the roots</span><br>
+
+            </div>
+        </li>
+
+        <li>
+            <h4>$sin^2{75^\circ} - sin^2{15^\circ}$ is</h4>
+            <ul class="choices">
+                <li><label><input type="radio" name="question1" value="A"><span>$\frac{1}{2}$</span></label></li>
+                <li><label><input type="radio" name="question1" value="B"><span>$\frac{\sqrt{3}}{2}$</span></label></li>
+                <li><label><input type="radio" name="question1" value="C"><span>$1$</span></label></li>
+                <li><label><input type="radio" name="question1" value="D"><span>$0$</span></label></li>
+            </ul>
+            <div class="">
+                <span>$\Rightarrow sin(75^\circ + 15^\circ)sin(75^\circ - 15^\circ)$</span><br>
+                <span>$\Rightarrow sin(90^\circ)sin(60^\circ)$</span><br>
+                <span>$\Rightarrow \frac{\sqrt{3}}{2}$</span><br>
+            </div>
+        </li>
+
+        <li>
+            <h4>if $A+B+C = 180^\circ$, then $secA(cosBcosC - sinBsinC)$ is equal to</h4>
+            <ul class="choices">
+                <li><label><input type="radio" name="question1" value="A"><span>0</span></label></li>
+                <li><label><input type="radio" name="question1" value="B"><span>-1</span></label></li>
+                <li><label><input type="radio" name="question1" value="C"><span>1</span></label></li>
+                <li><label><input type="radio" name="question1" value="D"><span>none of these</span></label></li>
+            </ul>
+            <div class="">
+                <span>$\Rightarrow cos(B+C) = -cosA$ and $\frac{cos(B+C)}{cosA}$</span><br>
+                <span>$\Rightarrow \frac{cos(B+C)}{-cos(B+C}$</span><br>
+                <span>$\Rightarrow 1$</span><br>
+            </div>
+        </li>
+
+        <li>
+            <h4>$tan20^\circ + tan40^\circ + \sqrt{3}tan20^\circ tan40^\circ$ is equal to </h4>
+            <ul class="choices">
+                <li><label><input type="radio" name="question1" value="A"><span>$\frac{\sqrt{3}}{4}$</span></label></li>
+                <li><label><input type="radio" name="question1" value="B"><span>$\frac{\sqrt{3}}{2}$</span></label></li>
+                <li><label><input type="radio" name="question1" value="C"><span>$\sqrt{3}$</span></label></li>
+                <li><label><input type="radio" name="question1" value="D"><span>1</span></label></li>
+            </ul>
+            <div class="">
+                <span>$\Rightarrow tan(20^\circ + 40^\circ) = \frac{tan20^\circ + tan40^\circ}{1 - tan20^\circ tan40^\circ}$</span><br>
+                <span>$\Rightarrow tan60^\circ = tan20^\circ + tan40^\circ + \sqrt{3}tan20^\circ tan40^\circ$</span><br>
+                <span>$\Rightarrow \sqrt{3}$</span><br>
+            </div>
+        </li>
+
+    </ol>
+
+
+    <button class="view-results" onclick="returnScore()">View Results</button>
+    <span id="myresults" class="my-results">My results will appear here</span>
+</body>
+</html>

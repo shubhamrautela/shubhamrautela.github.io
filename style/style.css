@@ -21,6 +21,7 @@ canvas{
 li {
   background: rgba(255,84,104,0.3);
   border: 2px solid rgb(255,84,104);
+  font-size: 20px;
   margin-top: 10px;
   padding: 10px 10px 10px 10px;
 

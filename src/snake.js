@@ -9,8 +9,7 @@ let food;
 let width,height;
 let length = 3;
 let score = 0;
-
-
+let cnv;
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
@@ -20,7 +19,8 @@ function setup(){
   width = windowWidth - 400;
   height = windowHeight - 50;
 
-  createCanvas(width,height);
+  cnv = createCanvas(width,height);
+  cnv.style("display","block");
   for(let i = 0;i<length;i++){
     snake.push(new Ball(initX+(length-i)*length,initY));
   }
@@ -50,7 +50,7 @@ function draw(){
   snake[0].y+=yStep;
   ellipse(snake[0].x,snake[0].y,radius,radius);
   console.log(food.x+ " " + food.y);
-  if(Math.sqrt(Math.pow(snake[0].x-food.x,2)+Math.pow(snake[0].y-food.y,2))<radius){
+  if(Math.sqrt(Math.pow(snake[0].x-food.x,2)+Math.pow(snake[0].y-food.y,2))<=radius){
     score++;
     food = new Ball(radius+Math.random()*(width-3*radius),radius+Math.random()*(height-3*radius));
     snake.push(new Ball(snake[snake.length-1].x,snake[snake.length-1].y));
@@ -91,4 +91,12 @@ function keyPressed() {
     yStep = step;
     xStep = 0;
   }
+  else if (keyCode === 32){
+    if(isLooping()){
+      noLoop();
+    }
+    else loop();
+  }
+  else if(keyCode === 83)
+  saveCanvas(cnv,"snake","png");
 }

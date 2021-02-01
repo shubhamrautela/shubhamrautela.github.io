@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Sets</title>
+    <script src="../src/load-mathjax.js" async></script>
+    <script type="text/javascript" src="../src/functions.js">
+
+    </script>
+    <link href="../style/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <center><h1>Functions</h1></center>
+    <br>
+    <ul>
+      <li>Definition of a function:- A relation from $A$ to $B$ ie. a subset of $A\times B$ is called a function from $A$ to $B$ if:
+        <ol>
+          <li>for each $a\in A$ there exist $b \in B$ such that $(a,b) \in f$</li>
+          <li>if $(a,b)\in f$ and $(a,c) \in f$ then $b=c$</li>
+        </ol>
+      </li>
+      <li>if $(a,b) \in f$ then b is called image of $a$ under $f$</li>
+      <li>$f:A\rightarrow B$
+        <ul>
+          <li>A is domain of $f$</li>
+          <li>B is co-domain of $f$</li>
+          <li>$f(A)$ = range of $f$</li>
+          <li>$f(A) \subseteq B$</li>
+        </ul>
+      </li>
+
+      <li>Equal Functions:- two functions $f$ and $g$ are equal iff
+        <ol>
+          <li>domain of $f$ = domain of $g$</li>
+          <li>co-domain of $f$ = codomain of $g$</li>
+          <li>$f(x) = g(x)$ for every $x$ in their common domain.</li>
+        </ol>
+
+        <ul>
+          <li>$f: R - \{2\} \rightarrow R$, $f(x) = \frac{x^2-4}{x-2}$ and $g: R\rightarrow R$, $g(x) = x +2$<br>
+            $f(x) = g(x)$ but domain of $f(x) \neq g(x)$ so $f(x) \& g(x)$ are not equal functions.
+          </li>
+          <li>$f=\{(n,n^2):n\in Z\}$, $g=\{(n,\mid{n^2}\mid):n\in Z\}$, $f=g$</li>
+        </ul>
+      </li>
+      <li>Real functions: A function $f: A\rightarrow B$ is called a real valued function if B is a subset of $R$.
+        If $A$ and $B$ both are subsets of R then it is a real function.<br>
+          </li>
+
+      <li>Domain of real functions: domain of f(x) is a set of all those real numbers for which $f(x)$ is meaningful.<br>
+        <ul>
+          <li>if $f(x) = \frac{1}{x}$ then $x \neq 0$</li>
+          <li>if $f(x) = \sqrt{x-a}$ then $x-a\geq 0$</li>
+          <li>if $f(x) = \frac{1}{\sqrt{x-a}}$ then $x-a\gt 0$</li>
+          <li>if $f(x)= \sqrt{4-x} + \frac{1}{\sqrt{x^2-1}}$<br>
+              $\Rightarrow (4-x)\geq 0$ and $(x^2-1) \gt 0$<br>
+              $\Rightarrow x = (-\infty,-1) \cup (1,4]$
+            </li>
+        </ul>
+      </li>
+
+      <li>Range of a function: Range of a real function is the set of all real values taken by f(x) at points in its domain.<br>
+        put $y = f(x)$<br>
+        $ \Rightarrow$ solve for $x$ in terms of $y$<br>
+        $ \Rightarrow$ find values of $y$ for which the values of $x$ are real in its domain.
+        <ul>
+          <li>$f(x) = \frac{1}{\sqrt{x-5}}$<br>
+              domain = $x > 5$, $x\in (5,\infty)$<br>
+              $x-5>0 \Rightarrow \sqrt{x-5} > 0 \Rightarrow \frac{1}{\sqrt{x-5}} \Rightarrow f(x) > 0$<br>
+              Range of $f = (0,\infty)$
+          </li>
+          <li>$f(x) = \frac{3}{2-x^2}$<br>
+            Domain($f$) = $R-\{-\sqrt{2},\sqrt{2}\}$<br>
+            $y = \frac{3}{2-x^2}$<br>
+            $\Rightarrow 2y - x^2y = 3$<br>
+            $\Rightarrow x = \pm \sqrt{\frac{2y-3}{y}}$<br>
+            $\Rightarrow \frac{2y-3}{y} \geq 0$<br>
+            $\Rightarrow y \in (-\infty,0) \cup [\frac{3}{2},\infty)$
+          </li>
+
+          <li>$f(x) = \frac{x}{1+x^2}$<br>
+            Domain($f$) = $R$<br>
+            $y = \frac{x}{1+x^2}$<br>
+            $\Rightarrow x^2 y - x + y = 0$<br>
+            $\Rightarrow x = \frac{1\pm \sqrt{1-4y^2}}{2y}$<br>
+            $x$ will assume real values, if $1 - 4y^2 \geq 0$ and $y\neq 0$<br>
+            $\Rightarrow y \in [-\frac{1}{2},\frac{1}{2}] - \{0\}$<br>
+            Also, $y=0$ for x =0, Range($f$) = $[-\frac{1}{2},\frac{1}{2}]$
+
+          </li>
+          <li>$f(x) = \frac{1}{2-sin3x}$<br>
+            $2-sin3x \neq 0$ for any $x\in R$<br>
+            $f(x) = \frac{1}{2-sin3x}$ is defined for all $x \in R$<br>
+            domain($f$) = $R$<br>
+            Range of $f$: <br>
+            $1 \leq 2-sin3x \leq 3$ for all $x\in R$<br>
+            $\Rightarrow \frac{1}{3} \leq \frac{1}{2-sin3x} \leq 1$ for all $x \in R$<br>
+            $\Rightarrow f(x) \in [\frac{1}{3},1]$
+
+          </li>
+        </ul>
+      </li>
+
+        <li> Constant function:- $f(x) = k, x \in R$<br>
+          domain of $f = R$, Range of $f(x) = {k}$<br>
+          <canvas id="canvas1" width="720" height="400"></canvas></li>
+        <li> Identity function:- the function that associate each real number to itself denoted by I.<br>
+          $f(x) = x$, $I:R\rightarrow R$, $I(x) = x$, $x\in R$<br>
+          <canvas id="canvas2" width="720" height="400"></canvas></li>
+        <li> Modulus function:- $f(x) =  |x|$<br>
+          domain of $f = R$, range of $f = R^{+} \{x:x\geq 0\}$<br>
+          Properties of modulus function:- <br>
+          <ol>
+            <li>$\sqrt{x^2} = |x| \Rightarrow y^2 = x \Rightarrow y = \pm \sqrt{x}$</li>
+            <li>if $a$ and $b$ are positive real numbers <br>
+              $x^2 \leq a^2 \Leftrightarrow |x| \leq a \Leftrightarrow -a \leq x \leq a$<br>
+              $x^2 \geq a^2 \Leftrightarrow |x| \geq a \Leftrightarrow -a \geq x \geq a$<br>
+            </li>
+            <li>$|x+y| = |x| + |y|$ only if $x$ & $y \geq 0$ or $x$ & $y < 0$</li>
+            <li>$|x-y| = |x| - |y|$ only if $x$ & $y \geq 0$ & $|x| \geq |y|$ or $x$ & $y < 0, |x| \geq |y|$</li>
+            <li>$|x\pm y| \leq |x| + |y|$</li>
+            <li>$|x\pm y| \geq ||x|-|y||$</li>
+          </ol>
+
+
+          <br>
+          <canvas id="canvas3" width="720" height="400"></canvas></li>
+        <li>Greatest Integer function(floor function)<br>
+          $\lfloor x \rfloor$ greatest integer less than equal to x.<br>
+          $f: R \rightarrow R, f(x) = \lfloor x \rfloor \forall x \in R$<br>
+          domain:- $R$, range:- $Z$<br>
+          if $n$ is integer and $x$ lies between $n$ & $n+1$
+          <ol>
+            <li>$\lfloor n \rfloor = -\lfloor n \rfloor$</li>
+            <li>$\lfloor x + k \rfloor = \lfloor x \rfloor + k$</li>
+            <li>$\lfloor -x \rfloor = -\lfloor x \rfloor - 1$</li>
+            <li>$\lfloor x \rfloor + \lfloor -x \rfloor$ = -1 if $x \in Z $ = 0 if $x \in z$</li>
+            <li>$\lfloor x \rfloor - \lfloor -x \rfloor$ = $2x+1$ if $x \in Z $ = 2x if $x \in z$</li>
+            <li>$\lfloor x \rfloor \geq k \Rightarrow x \geq k$</li>
+            <li>$\lfloor x \rfloor \leq k \Rightarrow x \leq k+1$</li>
+            <li>$\lfloor x \rfloor \gt k \Rightarrow x \geq k+1$</li>
+            <li>$\lfloor x \rfloor \lt k \Rightarrow x \lt k$</li>
+            <li>$\lfloor x+y \rfloor = \lfloor x \rfloor + \lfloor y+x - \lfloor x \rfloor \rfloor$</li>
+            <li>$\lfloor x \rfloor \lfloor x+\frac{1}{n} \rfloor + \lfloor x+\frac{2}{n} \rfloor + ... + \lfloor x+\frac{n-1}{n} \rfloor$ = $\lfloor nx \rfloor$</li>
+          </ol>
+
+
+          <canvas id="canvas4" width="720" height="400"></canvas></li>
+
+        <li>Ceiling Funciton:- $f:R\rightarrow R$ $f(x) = \lceil x \rceil$<br>
+          domain: $R$, Range: $Z$<br>
+          Properties:- <br>
+          <ol>
+            <li>$\lceil -n \rceil = -\lceil n \rceil$</li>
+            <li>$\lceil -x \rceil = -\lceil x \rceil + 1$</li>
+            <li>$\lceil x + n \rceil = \lceil -x \rceil + n$ where $x \in R - Z$ and $n \in Z$</li>
+            <li>$\lceil x \rceil + \lceil -x \rceil = 1, x \not\in Z,  = 0, x \in Z$ </li>
+            <li>$\lceil x \rceil - \lceil -x \rceil = 2 \lceil x \rceil -1, x \not\in Z, = 2 \lceil x \rceil $</li>
+
+          </ol>
+          <canvas id="canvas5" width="720" height="400"></canvas></li>
+        <li>Signum function:- $f(x) = \frac{|x|}{x} x\neq 0, 0 x=0$<br>
+          $f(x)=\{1(x\gt 0),0(x=0),-1(x\lt 0\}$ <br>
+
+          <canvas id="canvas6" width="720" height="400"></canvas></li>
+
+          <li>Exponential function:- if $a$ is a positive real number $\neq 1$  then function $x\rightarrow a^x$ is called the exponential function.<br>
+              $f: R \rightarrow R$, $f(x) = a^x, a>0 a\neq 1$<br>
+              domain of exp. function = $R$, range is set $(0,\infty)$<br>
+              <ol>
+                <li>Case I: when $a>1, a^x$ increases as x increases<br>
+                  $f(x) = \left\{\begin{array}{ll} \lt 1 & : x \lt 0\\ =1 & : x = 0 \\ \gt 1 & : x > 1 \end{array} \right.$<br>
+                    <canvas id="canvas7" width="720" height="400"></canvas></li>
+              </li>
+              <li>Case II: when $a\lt 1, a \gt 0,  a^x$<br>
+                $f(x) = \left\{\begin{array}{ll} \lt 1 & : x \gt 0\\ =1 & : x = 0 \\ \gt 1 & : x \lt 1 \end{array} \right.$<br>
+                  <canvas id="canvas8" width="720" height="400"></canvas></li>
+                  </ol>
+            </li>
+
+
+
+
+              <li>Logarithmic function:- $a>0, a\not\in 1 f(x) = log_ax, x>0$<br>
+                $log_ax = y \Rightarrow x = a^y$<br>
+                <ol>
+                  <li>Case I: when $a>1$<br>
+                    $f(x) = log_ax \left\{\begin{array}{ll} \lt 0 & : 0 \lt x \lt 1\\ =0 & : x = 1 \\ \gt 0 & : x > 1 \end{array} \right.$<br>
+                      <canvas id="canvas9" width="720" height="400"></canvas></li>
+                </li>
+                <li>Case II: when $a\lt 1, a \gt 0,  a^x$<br>
+                  $f(x) = log_ax \left\{\begin{array}{ll} \gt 0 & : 0 \lt x \lt 1\\ =0 & : x = 1 \\ \lt 0 & : x \gt 1 \end{array} \right.$<br>
+                    <canvas id="canvas10" width="720" height="400"></canvas></ol>
+                    Properties:- <ol>
+                      <li>$log_a1 = 0, a\gt 0, a\neq 1$</li>
+                      <li>$log_aa = 1$</li>
+                      <li>$log_a(xy) = log_a|x| + log_a |y|$</li>
+                      <li>$log_a(\frac{x}{y}) = log_a|x| - log_a |y|$</li>
+                      <li>$log_ax^n = nlog_ax$</li>
+                      <li>$log_{a^n} x^m = \frac{m}{n}log_ax$</li>
+                      <li>$x^{log_ay-}= y^{log_ax}$</li>
+                      <li>$log_ax = \frac{1}{log_xa}$</li>
+
+                  </li>
+                    </ol>
+
+              </li>
+
+
+    </ul>
+  </body>
+</html>

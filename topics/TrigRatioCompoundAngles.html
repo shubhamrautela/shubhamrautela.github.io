@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Sets</title>
+    <script src="../src/load-mathjax.js" async></script>
+    <script type="text/javascript" src="../src/functions.js">
+
+    </script>
+    <link href="../style/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <center><h1>Trigonometric Ratios of Compound Angles</h1></center>
+    <br>
+    <ul>
+      <li>Algebraic sums of two or more angles are generally called compound angles, and the angles are known as the constituent angles.</li>
+      <li>Trigonometric Ratios of Sum and Difference of two angles.
+          <ol>
+              <li>$cos(A-B) = cosA cosB + sinA sinB$: Three points $p_1, p_2, p_3$, equal chords subtend equal angles at centre.</li>
+              <li>$cos(A+B) = cosA cosB - sinA sinB: cos(A-(-B))$</li>
+              <li>$sin(A-B) = sinAcosB - cosAsinB: cos((90-A)+B)$</li>
+              <li>$sin(A+B) = sinAcosB + cosAsinB: sin(A-(-B))$</li>
+              <li>$tan(A\pm B) = \frac{tanA \pm tanB}{1\mp tanAtanB}$</li>
+              <li>$cot(A \pm B) = \frac{cotA cotB \mp 1}{cotA \pm cotB}$</li>
+          </ol>
+        </li>
+        <li>More Useful results
+            <ol>
+                <li>$sin(A+B)sin(A-B) = sin^2A - sin^2B = cos^2B - cos^2A$</li>
+                <li>$cos(A+B)cos(A-B) = cos^2A - sin^2B = cos^2B - sin^2A$</li>
+                <li>$sin(A+B+C) = sinAcosBcosC + cosAsinBcosC + cosAcosBsinC - sinAsinBsinC$</li>
+                <li>$cos(A+B+C) = cosAcosBcosC - cosAsinBsinC + sinAcosBsinC + sinAsinBcosC$</li>
+                <li>$tan(A+B+C) = \frac{tanA + tanB + tanC - tanAtanBtanC}{1 - tanAtanB - tanBtanC - tanCtanA}$</li>
+            </ol>
+        </li>
+
+        <li>
+            Things to remember
+            <ol>
+                <li>$sin(75^\circ) = cos(15^\circ) = \frac{\sqrt{3} +1 }{2\sqrt{2}}$</li>
+                <li>$sin(15^\circ) = cos(75^\circ) = \frac{\sqrt{3} -1 }{2\sqrt{2}}$</li>
+                <li>$tan(75^\circ) = \frac{\sqrt{3} +1 }{\sqrt{3}-1} = 2 + \sqrt{3} = cot15^\circ$</li>
+                <li>$tan(15^\circ) = \frac{\sqrt{3} -1 }{\sqrt{3}+1} = 2 - \sqrt{3} = cot75^\circ$</li>
+                <li>$tan(A) - tan(B)= \frac{sin(A-B)}{cosAcosB}$</li>
+                <li>$cotAcotB + 1 = \frac{cos(A-B)}{sinAsinB}$</li>
+            </ol>
+        </li>
+        <li>
+            Maximum and minimum values of trigonometrical expressions:- <br />
+            we know that $-1 \leq sin\theta \leq 1$<br />
+            if $f(x) = acos\theta + bsin\theta$ then max, min values can be find as follows:- <br />
+            let $a = rsin\alpha, b = rcos\alpha$<br />
+            $a^2 + b^2 = r^2(sin^2\alpha + cos^2\alpha)$ and $\frac{a}{b} = \frac{rsin\alpha}{rcos\alpha}$<br />
+            $r = \sqrt{a^2 + b^2}, tan\alpha = \frac{a}{b}$<br />
+            substituting values of a and b in f(\theta), we obtain <br />
+            $f(\theta) = r(sin\alpha cos\theta + cos\alpha sin\theta) = r sin(\alpha + \theta)$<br />
+            $-1 \leq sin(\alpha + \theta \leq 1$ <br />
+            $-r \leq rsin(\alpha + \theta \leq r$ <br />
+            $ -\sqrt{a^2 + b^2} \leq sin(\alpha + \theta) \leq \sqrt{a^2 + b^2}$
+        </li>
+        <li>
+            To express $acos\theta + bsin\theta $ in the form of $r sin(\theta \pm alpha)$ or $r cos (\theta \pm \alpha$<br />
+            1. Multiply and divide $f(\theta) = a cos\theta + b sin\theta$ by $\sqrt{a^2 + b^2}$ to get:<br />
+            $f(\theta) = \sqrt{a^2 + b^2 }\{\frac{a}{\sqrt{a^2 + b^2}}cos \theta + \frac{b}{\sqrt{a^2 + b^2}}sin\theta\}$<br />
+            then replace with coefficents.
+
+        </li>
+    </ul>
+  </body>
+</html>

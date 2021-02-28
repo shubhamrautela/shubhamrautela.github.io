@@ -35,7 +35,7 @@ function handleSubmit(evt) {
     document.querySelector(".warning").innerHTML = "";
   }
   else {
-    document.querySelector(".warning").innerHTML = "please fill all the fields and fix these errors: ";
+    document.querySelector(".warning").innerHTML = "please fill all the fields and fix the errors. ";
   }
 
 }

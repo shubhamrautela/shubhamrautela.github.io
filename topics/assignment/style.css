@@ -1,0 +1,69 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.1em;
+  
+}
+
+header{
+  text-align: center;
+  background-color: #46d7ac;
+  font-size: 1.8rem;
+  padding: 1.5rem 0;
+  min-height: 5rem;
+  min-width: 25rem;
+  color: white;
+  width: 100vw;
+  height: 10vh;
+}
+
+main{
+}
+
+form{
+  margin: 4rem;
+}
+
+.tabledata{
+  padding-top: 2rem;
+}
+.fade-in{
+  max-height: 15rem;
+} 
+.fade-in img{
+  height: auto;
+  width: 130px;
+}
+.fade-in {
+animation: fadeIn ease 4s;
+-webkit-animation: fadeIn ease 4s;
+-moz-animation: fadeIn ease 4s;
+-o-animation: fadeIn ease 4s;
+-ms-animation: fadeIn ease 4s;
+}
+@keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}

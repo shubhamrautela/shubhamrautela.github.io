@@ -18,7 +18,7 @@ function handleSubmit(evt) {
   let html = document.getElementById("html");
   let css = document.getElementById("css");
 
-  if (name && email && website && image && (male || female) && (java.checked || html.checked || css.checked)) {
+  if (name.value && email.value && website.value && image.value && (male.checked || female.checked) && (java.checked || html.checked || css.checked)) {
     var tableRef = document.getElementById('myTable').getElementsByTagName('tbody')[0];
     var gender = male.checked ? "Male" : "Female";
     var myHtmlContent = "<td colspan='4'><div class='fade-in'><p>"
@@ -40,8 +40,8 @@ function handleSubmit(evt) {
 
 }
 
-function clear(e) {
-  e.preventDefault();
+function clear(evt) {
+  evt.preventDefault();
   document.getElementById("name").value = "";
   document.getElementById("email").value = "";
   document.getElementById("website").value = "";
